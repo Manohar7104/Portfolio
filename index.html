@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kuraku Veera Manohar Reddy - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="container">
+        <div class="nav-brand">
+          <h2>Veera Manohar | Portfolio</h2>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-toggle" id="nav-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-background">
+        <div class="hero-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-title">
+              <span class="text-gradient">Kuraku Veera Manohar Reddy</span>
+            </h1>
+            <h2 class="hero-subtitle">
+              Aspiring Software Engineer & AI Developer
+            </h2>
+            <p class="hero-tagline">
+              Building innovative solutions with AI, Flutter, and modern web
+              technologies
+            </p>
+            <div class="hero-buttons">
+              <button
+                class="btn btn--primary hero-btn"
+                onclick="scrollToSection('projects')"
+              >
+                <i class="fas fa-code"></i> View My Work
+              </button>
+              <button
+                class="btn btn--outline hero-btn"
+                onclick="scrollToSection('contact')"
+              >
+                <i class="fas fa-envelope"></i> Contact Me
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <div class="scroll-indicator">
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">Get to know me better</p>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <p class="about-description">
+              I'm a passionate Information Technology student at Bharat
+              Institute of Engineering and Technology with expertise in AI/ML,
+              Flutter development, and modern web technologies. Currently
+              pursuing my B.Tech with a strong focus on building innovative
+              solutions that solve real-world problems.
+            </p>
+            <p class="about-description">
+              My journey in technology has led me through various projects
+              involving NLP chatbots, mobile app development, and AI-powered
+              solutions. I'm particularly interested in the intersection of
+              artificial intelligence and mobile development, creating
+              user-centric applications that make a difference.
+            </p>
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <i class="fas fa-graduation-cap"></i>
+                <span>B.Tech IT Student</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-brain"></i>
+                <span>AI/ML Enthusiast</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-mobile-alt"></i>
+                <span>Flutter Developer</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-code"></i>
+                <span>Full Stack Developer</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card">
+              <div class="stat-number" data-target="791">7.91</div>
+              <div class="stat-label">Current CGPA</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" data-target="3">3+</div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" data-target="15">15+</div>
+              <div class="stat-label">Technologies</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" data-target="1">1</div>
+              <div class="stat-label">AI Internship</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Education</h2>
+          <p class="section-subtitle">My academic journey</p>
+        </div>
+        <div class="education-timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-card">
+                <h3>Bachelor of Technology in Information Technology</h3>
+                <h4>Bharat Institute of Engineering and Technology</h4>
+                <p class="timeline-location">Hyderabad, India</p>
+                <div class="timeline-details">
+                  <span class="timeline-duration">2022 – 2026 (Expected)</span>
+                  <span class="timeline-grade">CGPA: 7.91</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-card">
+                <h3>Intermediate (MPC)</h3>
+                <h4>Sri Chaitanya Junior College</h4>
+                <p class="timeline-location">Hyderabad, India</p>
+                <div class="timeline-details">
+                  <span class="timeline-duration">2020 - 2022</span>
+                  <span class="timeline-grade">Percentage: 83.9%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-card">
+                <h3>Secondary School Certificate</h3>
+                <h4>Sri Vagdevi Talent School</h4>
+                <p class="timeline-location">Hyderabad, India</p>
+                <div class="timeline-details">
+                  <span class="timeline-duration">2020</span>
+                  <span class="timeline-grade">CGPA: 10.0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Projects & Achievements</h2>
+          <p class="section-subtitle">My recent work and accomplishments</p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-home"></i>
+              </div>
+              <div class="project-status status--warning">In Development</div>
+            </div>
+            <h3 class="project-title">House Planning Assistant</h3>
+            <p class="project-description">
+              Mobile app streamlining house design, budget estimation, Vastu
+              compliance, and builder communication for homeowners.
+            </p>
+            <div class="project-features">
+              <span class="feature-tag">Real-time chat</span>
+              <span class="feature-tag">Vastu analysis</span>
+              <span class="feature-tag">Floor planning</span>
+              <span class="feature-tag">AI suggestions</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech-badge">Flutter</span>
+              <span class="tech-badge">Firebase</span>
+              <span class="tech-badge">Google Maps</span>
+              <span class="tech-badge">Gemini AI</span>
+            </div>
+            <div class="project-duration">April 2025 – September 2025</div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-robot"></i>
+              </div>
+              <div class="project-status status--success">Completed</div>
+            </div>
+            <h3 class="project-title">NLP Based Chatbot</h3>
+            <p class="project-description">
+              Scalable NLP-based chatbot with intent classification and dynamic
+              response generation.
+            </p>
+            <div class="project-features">
+              <span class="feature-tag">Intent classification</span>
+              <span class="feature-tag">Real-time UI</span>
+              <span class="feature-tag">CSV logging</span>
+              <span class="feature-tag">ML pipeline</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">NLP</span>
+              <span class="tech-badge">TF-IDF</span>
+              <span class="tech-badge">Streamlit</span>
+            </div>
+            <div class="project-duration">December 2024 - January 2025</div>
+            <div class="project-links">
+              <a
+                href="https://github.com/Manohar7104"
+                target="_blank"
+                class="project-link"
+              >
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="project-status status--success">Completed</div>
+            </div>
+            <h3 class="project-title">Expenses Tracker</h3>
+            <p class="project-description">
+              Responsive single-page web application for tracking daily expenses
+              with quantity-based cost computation.
+            </p>
+            <div class="project-features">
+              <span class="feature-tag">DOM manipulation</span>
+              <span class="feature-tag">Real-time updates</span>
+              <span class="feature-tag">Persistent storage</span>
+              <span class="feature-tag">Responsive design</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">localStorage</span>
+            </div>
+            <div class="project-duration">March 2024 – June 2024</div>
+            <div class="project-links">
+              <a
+                href="https://github.com/Manohar7104"
+                target="_blank"
+                class="project-link"
+              >
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Skills & Technologies</h2>
+          <p class="section-subtitle">My technical expertise</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3 class="category-title">Programming Languages</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-mobile-alt"></i>
+                <span>Dart</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-code"></i>
+                <span>C</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-js-square"></i>
+                <span>JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="category-title">Mobile Development</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fas fa-mobile-alt"></i>
+                <span>Flutter</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="category-title">AI & Machine Learning</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fas fa-brain"></i>
+                <span>Vertex AI</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-robot"></i>
+                <span>Gemini AI</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-chart-line"></i>
+                <span>Scikit-learn</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-language"></i>
+                <span>NLTK</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="category-title">Cloud & Tools</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fas fa-fire"></i>
+                <span>Firebase</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-map"></i>
+                <span>Google Maps API</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-database"></i>
+                <span>SQL</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="category-title">Web Technologies</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fab fa-html5"></i>
+                <span>HTML</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="category-title">Soft Skills</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fas fa-puzzle-piece"></i>
+                <span>Problem-Solving</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-comments"></i>
+                <span>Communication</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-users"></i>
+                <span>Team Collaboration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Experience & Achievements</h2>
+          <p class="section-subtitle">
+            Professional experience and accomplishments
+          </p>
+        </div>
+        <div class="experience-content">
+          <div class="experience-card">
+            <div class="experience-header">
+              <div class="company-logo">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <div class="experience-details">
+                <h3>AI Intern</h3>
+                <h4>TechSaksham (Microsoft & SAP CSR Initiative)</h4>
+                <p class="experience-duration">December 2024 - January 2025</p>
+              </div>
+            </div>
+            <ul class="achievements-list">
+              <li>
+                Completed intensive internship focused on real-world AI and ML
+                applications
+              </li>
+              <li>
+                Gained hands-on experience in NLP, model training, and real-time
+                AI deployment
+              </li>
+              <li>
+                Developed NLP-based chatbot as capstone project with TF-IDF
+                vectorization
+              </li>
+            </ul>
+          </div>
+
+          <div class="achievements-grid">
+            <div class="achievement-card">
+              <div class="achievement-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <h4>Flutter Workshop Certification</h4>
+              <p>JB Tech Solutions • December 2024</p>
+            </div>
+
+            <div class="achievement-card">
+              <div class="achievement-icon">
+                <i class="fas fa-trophy"></i>
+              </div>
+              <h4>Winter Coding Challenge</h4>
+              <p>AXIS'25, VNIT Nagpur • January 2025</p>
+            </div>
+
+            <div class="achievement-card">
+              <div class="achievement-icon">
+                <i class="fas fa-users-cog"></i>
+              </div>
+              <h4>Student Coordinator</h4>
+              <p>Generative AI Workshop • May 2025</p>
+            </div>
+
+            <div class="achievement-card">
+              <div class="achievement-icon">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <h4>Technical Events Coordinator</h4>
+              <p>College Tech Fest • June 2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">
+            Let's work together on something amazing
+          </p>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Contact Information</h3>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <strong>Email</strong>
+                <p>kurakuveeramanoharreddy@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <strong>Phone</strong>
+                <p>+91 8328119067</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <strong>Location</strong>
+                <p>Hyderabad, Telangana, India</p>
+              </div>
+            </div>
+            <div class="social-links">
+              <a
+                href="https://www.linkedin.com/in/veeramanohar"
+                target="_blank"
+                class="social-link"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="https://github.com/Manohar7104"
+                target="_blank"
+                class="social-link"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-control"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                class="form-control"
+                placeholder="Subject"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                id="message"
+                name="message"
+                class="form-control"
+                rows="5"
+                placeholder="Your Message"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full-width">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-text">
+            <p>&copy; 2025 Kuraku Veera Manohar Reddy. All rights reserved.</p>
+          </div>
+          <div class="footer-links">
+            <a href="#home" class="footer-link">Home</a>
+            <a href="#about" class="footer-link">About</a>
+            <a href="#projects" class="footer-link">Projects</a>
+            <a href="#contact" class="footer-link">Contact</a>
+          </div>
+        </div>
+        <button class="back-to-top" id="back-to-top">
+          <i class="fas fa-chevron-up"></i>
+        </button>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
