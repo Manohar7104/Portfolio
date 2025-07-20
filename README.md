@@ -1,4 +1,4 @@
-# 💼 Veera Manohar — Developer Portfolio 🚀
+# 💼 Veera Manohar — Portfolio 🚀
 
 Welcome to my **personal portfolio website**, created as a submission for the **Bildfolio Hackathon 2025**. This website showcases my skills, education, projects, and experiences with a clean, tech-focused design — fully responsive and optimized for performance and accessibility.
 
@@ -52,6 +52,6 @@ I'm **Veera Manohar**, a B.Tech IT student passionate about designing clean, use
 
 ---
 
-> Designed with 💻 and a lot of 🚀 to win the **Bildfolio Hackathon**
+> Designed with 💻 and a lot of 🚀 to win the **Buildfolio Hackathon**
 
 ---
