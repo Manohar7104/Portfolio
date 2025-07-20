@@ -5,8 +5,7 @@ Welcome to my **personal portfolio website**, created as a submission for the **
 ---
 
 ## 🌐 Live Website  
-🔗 [Click to View My Portfolio](https://yourusername.github.io/bildfolio-portfolio/)  
-*(Replace with your actual hosted GitHub Pages link)*
+🔗 [Click to View My Portfolio](https://manohar7104.github.io/Portfolio/)  
 
 ---
 
@@ -38,7 +37,6 @@ Welcome to my **personal portfolio website**, created as a submission for the **
 ├── app.js
 ├── README.md
 
-
 ---
 
 ## 👤 About Me
@@ -54,5 +52,6 @@ I'm **Veera Manohar**, a B.Tech IT student passionate about designing clean, use
 
 ---
 
-
 > Designed with 💻 and a lot of 🚀 to win the **Bildfolio Hackathon**
+
+---
