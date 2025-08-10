@@ -204,11 +204,12 @@ function animateCounter(element) {
 }
 
 // Contact form functionality
+// Contact form functionality
 function initializeContactForm() {
   const contactForm = document.getElementById("contact-form");
 
   if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
+    contactForm.addEventListener("submit", async function (e) {
       e.preventDefault();
 
       // Get form data
@@ -223,13 +224,11 @@ function initializeContactForm() {
         showNotification("Please fill in all fields", "error");
         return;
       }
-
       if (!isValidEmail(email)) {
         showNotification("Please enter a valid email address", "error");
         return;
       }
 
-      // Simulate form submission
       const submitButton = this.querySelector('button[type="submit"]');
       const originalText = submitButton.innerHTML;
 
@@ -237,15 +236,33 @@ function initializeContactForm() {
         '<i class="fas fa-spinner fa-spin"></i> Sending...';
       submitButton.disabled = true;
 
-      setTimeout(function () {
-        showNotification(
-          "Thank you! Your message has been sent successfully.",
-          "success"
-        );
-        contactForm.reset();
+      try {
+        const response = await fetch(this.action, {
+          method: this.method,
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
+        });
+
+        if (response.ok) {
+          showNotification(
+            "Thank you! Your message has been sent successfully.",
+            "success"
+          );
+          contactForm.reset();
+        } else {
+          showNotification(
+            "Oops! There was an issue sending your message.",
+            "error"
+          );
+        }
+      } catch (error) {
+        showNotification("Oops! There was a network error.", "error");
+      } finally {
         submitButton.innerHTML = originalText;
         submitButton.disabled = false;
-      }, 2000);
+      }
     });
   }
 
