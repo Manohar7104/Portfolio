@@ -105,7 +105,6 @@ function initializeSmoothScrolling() {
 
 // Global scroll to section function
 function scrollToSection(targetId) {
-  // Remove # if present
   const sectionId = targetId.replace("#", "");
   const targetSection = document.getElementById(sectionId);
 
@@ -174,9 +173,10 @@ function initializeScrollAnimations() {
 
 // Statistics counter animation
 function initializeStatsCounter() {
-  // This will be triggered by the intersection observer
+  // Triggered by intersection observer
 }
 
+// ✅ FIXED animateCounter FUNCTION
 function animateCounter(element) {
   if (!element || element.classList.contains("animated")) return;
 
@@ -192,18 +192,23 @@ function animateCounter(element) {
       clearInterval(timer);
     }
 
-    // Format the number based on the target
-    if (target === 791) {
+    // ✅ Smarter display logic:
+    if (target % 1 !== 0) {
+      // If target is a decimal (e.g., 7.97), show two decimals
+      element.textContent = current.toFixed(2);
+    } else if (target === 791) {
+      // Special case (kept from original)
       element.textContent = (current / 100).toFixed(2);
     } else if (target >= 15) {
+      // Large stats like "15+" will show with a plus sign
       element.textContent = Math.ceil(current) + "+";
     } else {
+      // Default fallback for smaller integers
       element.textContent = Math.ceil(current);
     }
   }, 10);
 }
 
-// Contact form functionality
 // Contact form functionality
 function initializeContactForm() {
   const contactForm = document.getElementById("contact-form");
@@ -212,14 +217,12 @@ function initializeContactForm() {
     contactForm.addEventListener("submit", async function (e) {
       e.preventDefault();
 
-      // Get form data
       const formData = new FormData(this);
       const name = formData.get("name");
       const email = formData.get("email");
       const subject = formData.get("subject");
       const message = formData.get("message");
 
-      // Basic validation
       if (!name || !email || !subject || !message) {
         showNotification("Please fill in all fields", "error");
         return;
@@ -266,7 +269,6 @@ function initializeContactForm() {
     });
   }
 
-  // Add input animation effects
   const formControls = document.querySelectorAll(".form-control");
   formControls.forEach((control) => {
     control.addEventListener("focus", function () {
@@ -289,7 +291,6 @@ function isValidEmail(email) {
 
 // Notification system
 function showNotification(message, type = "info") {
-  // Create notification element
   const notification = document.createElement("div");
   notification.className = `notification notification--${type}`;
   notification.innerHTML = `
@@ -308,7 +309,6 @@ function showNotification(message, type = "info") {
         </button>
     `;
 
-  // Add styles if not already added
   if (!document.querySelector("#notification-styles")) {
     const styles = document.createElement("style");
     styles.id = "notification-styles";
@@ -343,57 +343,12 @@ function showNotification(message, type = "info") {
             .notification--info {
                 border-left: 4px solid var(--color-info);
             }
-            
-            .notification-content {
-                display: flex;
-                align-items: center;
-                gap: 0.75rem;
-            }
-            
-            .notification-content i {
-                color: var(--color-primary);
-                font-size: 1.2rem;
-            }
-            
-            .notification--success .notification-content i {
-                color: var(--color-success);
-            }
-            
-            .notification--error .notification-content i {
-                color: var(--color-error);
-            }
-            
-            .notification-close {
-                background: none;
-                border: none;
-                color: var(--color-text-secondary);
-                cursor: pointer;
-                font-size: 1rem;
-                padding: 0.25rem;
-                border-radius: 4px;
-                transition: background-color 0.3s ease;
-            }
-            
-            .notification-close:hover {
-                background: var(--color-secondary);
-                color: var(--color-text);
-            }
-            
-            @media (max-width: 768px) {
-                .notification {
-                    right: 1rem;
-                    left: 1rem;
-                    min-width: auto;
-                }
-            }
         `;
     document.head.appendChild(styles);
   }
 
-  // Add to DOM
   document.body.appendChild(notification);
 
-  // Close button functionality
   const closeButton = notification.querySelector(".notification-close");
   if (closeButton) {
     closeButton.addEventListener("click", function () {
@@ -401,7 +356,6 @@ function showNotification(message, type = "info") {
     });
   }
 
-  // Auto remove after 5 seconds
   setTimeout(function () {
     removeNotification(notification);
   }, 5000);
@@ -423,7 +377,6 @@ function initializeBackToTop() {
   const backToTopButton = document.getElementById("back-to-top");
 
   if (backToTopButton) {
-    // Show/hide button based on scroll position
     window.addEventListener("scroll", function () {
       if (window.scrollY > 300) {
         backToTopButton.classList.add("visible");
@@ -432,7 +385,6 @@ function initializeBackToTop() {
       }
     });
 
-    // Handle click event
     backToTopButton.addEventListener("click", function (e) {
       e.preventDefault();
       window.scrollTo({
@@ -445,7 +397,6 @@ function initializeBackToTop() {
 
 // Loading screen
 function initializeLoadingScreen() {
-  // Create loading screen if it doesn't exist
   if (!document.querySelector(".loading")) {
     const loadingScreen = document.createElement("div");
     loadingScreen.className = "loading";
@@ -455,7 +406,6 @@ function initializeLoadingScreen() {
 
   const loadingScreen = document.querySelector(".loading");
 
-  // Hide loading screen after page load
   window.addEventListener("load", function () {
     setTimeout(function () {
       if (loadingScreen) {
@@ -472,7 +422,6 @@ function initializeLoadingScreen() {
 
 // Hero button functionality
 document.addEventListener("DOMContentLoaded", function () {
-  // Handle "View My Work" button
   const viewWorkBtn = document.querySelector(".hero-btn");
   if (viewWorkBtn) {
     viewWorkBtn.addEventListener("click", function () {
@@ -480,7 +429,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Handle "Contact Me" button
   const contactBtn = document.querySelector(".btn--outline.hero-btn");
   if (contactBtn) {
     contactBtn.addEventListener("click", function () {
@@ -563,21 +511,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Add scroll progress indicator
 document.addEventListener("DOMContentLoaded", function () {
-  // Create progress bar
   const progressBar = document.createElement("div");
   progressBar.style.cssText = `
     position: fixed;
-        top: 0;
-        left: 0;
-        width: 0%;
-        height: 3px;
-        background: linear-gradient(135deg, #7F00FF 0%, #00FFFF 100%); /* Updated gradient for hackathon theme */
-        z-index: 10001;
-        transition: width 0.3s ease;
-    `;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(135deg, #7F00FF 0%, #00FFFF 100%);
+    z-index: 10001;
+    transition: width 0.3s ease;
+  `;
   document.body.appendChild(progressBar);
 
-  // Update progress on scroll
   window.addEventListener("scroll", function () {
     const scrollTop = window.pageYOffset;
     const docHeight = document.body.scrollHeight - window.innerHeight;
@@ -588,7 +534,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Handle reduced motion preference
 if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  // Disable animations for users who prefer reduced motion
   const style = document.createElement("style");
   style.textContent = `
         *, *::before, *::after {
@@ -600,12 +545,12 @@ if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   document.head.appendChild(style);
 }
 
-// Error handling for missing elements
+// Error handling
 window.addEventListener("error", function (e) {
   console.warn("Portfolio Error:", e.error);
 });
 
-// Add additional CSS animations
+// Additional CSS animations
 const additionalStyles = `
     @keyframes slideOutToRight {
         to {
@@ -637,8 +582,6 @@ const additionalStyles = `
         width: 100%;
     }
 `;
-
-// Add the additional styles to the document
 const styleSheet = document.createElement("style");
 styleSheet.textContent = additionalStyles;
 document.head.appendChild(styleSheet);
