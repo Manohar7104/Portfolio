@@ -3,7 +3,7 @@
 Welcome to my personal portfolio website built to showcase my skills, projects, achievements, and experiences in a modern and interactive way.
 
 🔗 **Live Portfolio:**
-[Portfolio Website](https://manohar7104.github.io/Portfolio/?utm_source=chatgpt.com)
+[Portfolio Website](https://manohar7104.github.io/Portfolio/)
 
 ---
 
